@@ -209,11 +209,7 @@ main div {
 }
 
 
-.text_about{
-    font-size: 1rem;
-    line-height: 1.8;
-    color: white;
-}
+ 
 
 .cursor{
     display:inline-block;
@@ -222,45 +218,40 @@ main div {
     animation: blink 0.8s infinite;
 }
 
-.abo-img{
-    opacity: 0;
-    transform: translateX(-100px);
+ 
 
-    animation: slideLeft 1s ease forwards;
+
+.abo-img,
+.text_about{
+    opacity: 0;
+    transform: translateY(80px);
+
+    animation: slideUp linear forwards ;
     animation-timeline: view();
     animation-range: entry 20% cover 40%;
 }
 
 .text_about{
-    opacity: 0;
-    transform: translateX(100px);
-
-    animation: slideRight 1s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 20% cover 40%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: white;
 }
 
-@keyframes slideLeft{
+@keyframes slideUp{
     from{
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(80px);
     }
     to{
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
+ 
 
-@keyframes slideRight{
-    from{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+ 
+
+ 
 
  
  
@@ -440,6 +431,29 @@ main div {
     margin-top: 2px;
     border-radius: 5px;
 
+}
+
+.scontainer,
+.ccontainer,
+.econtainer,
+.abo-img,
+.text_about {
+
+    animation: slideReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+}
+
+@keyframes slideReveal {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
