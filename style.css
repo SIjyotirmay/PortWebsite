@@ -4,20 +4,57 @@
     font-family: 'poppins','sans-serif';
     box-sizing: border-box;
 }
+
 body{
-    background-color: #333841;
-    background-image: url("./resources/background.jpg");
-    background-size: 100% 100%;
-    color: #fff;
+    background:
+        radial-gradient(circle at top left,
+        rgba(231,149,39,0.08),
+        transparent 30%),
+
+        radial-gradient(circle at bottom right,
+        rgba(23,77,77,0.25),
+        transparent 35%),
+
+        linear-gradient(
+            135deg,
+            #0A1A1A,
+            #174D4D,
+            #25383A
+        );
+
+    min-height: 100vh;
     width: 100%;
+    color: #fff;
 }
+
+
+
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: #b632328a;
+    width: 100%;
+        background:
+        radial-gradient(circle at top left,
+        rgba(231,149,39,0.08),
+        transparent 30%),
+
+        radial-gradient(circle at bottom right,
+        rgba(23,77,77,0.25),
+        transparent 35%),
+
+        linear-gradient(
+            135deg,
+            #0A1A1A,
+            #174D4D,
+            #393d3d
+        );
+ 
 }
+
+ 
+
 nav ul{
     display: flex;
     justify-content: center;
@@ -51,15 +88,17 @@ main{
 .profile img{
     background-color: black;
     border-radius: 50%;
+    width: 300px;
+    height: 300px;
     cursor: pointer;
     margin-right: 50px;
-    filter: grayscale(0.4);
-    transition: .3s;  
+    filter: grayscale(0.1);
+    transition: .2s;  
 }
 
 .profile img:hover{
     filter: grayscale(0);
-    transform: scale(1.1) rotate(-1deg);
+    transform: scale(1.1) rotate(0deg);
 }
 
 
@@ -151,7 +190,7 @@ article img{
 .ccontainer{
     border: #fff;
     width: 255px;
-    height: 300px;
+    height: 310px;
     border-width: 5px;
     background: rgba(50, 51, 52, 0.6);
     border-radius: 5%;
@@ -167,8 +206,8 @@ article img{
 
 .scontainer{
     border: #fff;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border-width: 5px;
     background: rgba(106, 137, 168, 0.6);
     border-radius: 5%;
@@ -207,6 +246,8 @@ article img{
 }
 .project-img{
     padding: 5px;
+    width: 240px;
+    height: 170px;
     padding-top: 10px;
     border-radius: 10%;
     filter: grayscale(0.2);
@@ -227,28 +268,39 @@ article img{
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     display: inline;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 30px; 
 }
 
 .abo{
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 1.5rem;
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-around;
-    align-content: space-around ;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
     margin-bottom: 50px;
+    cursor: pointer;
 
 }
 .abo-img{
-    border-radius: 30%;
+    border-radius: 10%;
+    width: 400px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+    
 }
+
+.text_about{
+    margin-top: 0;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
 .p_btn{
-    color: #fff;
+  color: #fff;
   background: #565558;
   width: 87px;
   border-radius: 50px;
@@ -263,4 +315,116 @@ article img{
 .p_btn:hover{
     background: #242a35;
     transform: scale(1.01);
+}
+
+.skill-img{
+    width: 120px;
+    margin-top: 2px;
+    border-radius: 5px;
+
+}
+
+
+/* ===========================
+   Mobile Responsive Design
+   =========================== */
+
+@media screen and (max-width: 768px) {
+
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    nav ul li{
+        margin: 8px 10px;
+    }
+
+    .left{
+        font-size: 1.5rem;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .profile img{
+        width: 220px;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    img{
+        width: 220px;
+        height: auto;
+    }
+
+    .project-img{
+        width: 220px;
+        height: auto;
+    }
+
+ 
+    .about{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    .p_btn{
+        width: 70px;
+    }
+
+    .abo{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-around;
+        align-content: space-around ;
+        margin-bottom: 50px;
+    }
+
+    .scontainer{
+        margin-top: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 150;
+        margin-bottom: 50px;
+        transition: 0.3s;
+    }
+
+    .ccontainer{
+        margin-left: 0px;
+    }
+
+    .text_about{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0px;
+    }
+
+    .abo-img{
+        width: 240px;
+        margin-left: 0px;
+        
+    }
+
+ 
 }
