@@ -152,6 +152,11 @@ article img{
     align-content: space-around ;
 
 }
+
+.skill-img{
+    height: 90px;
+}
+
 .exp{
     display: flex;
     flex-wrap: wrap;
